@@ -25,4 +25,4 @@ HTML, CSS, and JavaScript
 # Launch Deployed Link:
 25 January 2022
 
-Link to deployed project:
+Link to deployed project: https://shanchaiz.github.io/Code-Quiz-Mock/
