@@ -1,0 +1,163 @@
+:root {
+    background-color: whitesmoke;
+    font-size: 62.5%;
+};
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1 rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: indigo;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+/*RESPONSIVENESS*/
+
+.container {
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: auto;
+}
+
+/* the objective here is to center everything inside this application:
+stating 100vh and 100vw ==> the content in the container will take up 100% of the viewing screen/port!
+display: flex ==> it turns the display window into flex for responsive window design.
+justify-content: center ==> it will center the container's content horizontallly.
+align-items: center ==> it will center the content of the contain vertically. for example:
+max-width:auto = 80rem = 800px and margin:auto is done to ensure when display window is maxed out then it will be centered but when display windown is reduced then the content will center on smaller screen. */
+
+.container > * {
+    width: 100%;
+}
+/*.container > * {} means any child of the container class will have these properties*/
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+/*  Purpose of "display: flex" and "flex-direction: column" is when the display is reduced, the display windown will be flexible to resizing and flex-direction will set the direction of the objects into a column instead of the default horizontal. Therefore it will stack the elements on top of each other*/
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*hidden is state in case if we need to hide content */
+.hidden {
+    display:none;
+}
+
+
+/* Button styling*/
+
+.button {
+    font-size: 1.8rem;
+    padding: 1 rem;
+    width:20rem;
+    text-align: center;
+    border: 0.1rem solid indigo;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: indigo;
+}
+/*text-decoration:none ==> added because since the buttons are a hyperlink with UNDERLINE, the none decoration removes the underline*/
+
+.button:hover {
+    cursor: pointer;
+    box-shadow:0 0.4rem 1.4rem orchid;
+    transform:translateY(-0.1rem);
+    transition: 150ms;
+}
+
+/*the styling on disabled button when no username is entered*/
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow:none;
+    transform: none;
+}
+
+/*Forms styling*/
+
+form {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom:1rem;
+    width:20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 indigo;
+}
+
+input::placeholder {
+    color: black;
+}
+
+
+
+/*Highscore page styling*/
+
+#highScoresList{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+    font-size: large;
+
+}
+
+.high-score{
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+    transform: scale(1);
+}
+
